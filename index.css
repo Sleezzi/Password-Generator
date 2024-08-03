@@ -1,0 +1,152 @@
+:root {
+    --background: #333;
+    --alt-background: #190d55;
+    --color: #FFF;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--background);
+    color: var(--color);
+}
+#textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(50% - 1rem * 2);
+    padding: 1rem;
+}
+#typingContainer h1 {
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+h3 {
+    text-align: center;
+}
+#download {
+    background: var(--alt-background);
+    padding: .75rem;
+    color: var(--color);
+    border-radius: .5rem;
+    text-decoration: none;
+}
+#download:after {
+    content: " ↗";
+    font-size: 0;
+    transition: font-size .2s ease;
+}
+#download:hover {
+    text-decoration: underline;
+}
+#download:hover:after {
+    font-size: 100%;
+}
+#passwordGeneratorContainer {
+    --background: #08002e;
+    --alt-background: #190d55;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    background: var(--background);
+    height: 7.5%;
+    width: 30%;
+    overflow: auto;
+    border-radius: .5rem;
+}
+#passwordGeneratorContainer input#length {
+    background: var(--alt-background);
+    color: var(--color);
+    padding: .5rem;
+    height: 1rem;
+    width: 1rem;
+    border: none;
+    border-radius: .25rem;
+    -moz-appearance: textfield;
+    font-family: "Poppins", sans-serif;
+}
+#passwordGeneratorContainer input::-webkit-outer-spin-button,
+#passwordGeneratorContainer input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#passwordGeneratorContainer div {
+    background: var(--alt-background);
+    color: var(--color);
+    padding: .5rem;
+    height: 1rem;
+    width: 45%;
+    border-radius: .25rem;
+    overflow: scroll hidden;
+    font-family: "Poppins", sans-serif;
+}
+#passwordGeneratorContainer button#copy {
+    background: var(--alt-background);
+    color: var(--color);
+    border: none;
+    padding: .5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+#passwordGeneratorContainer button#generate {
+    background: var(--alt-background);
+    color: var(--color);
+    border: none;
+    padding: .5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+#passwordGeneratorContainer ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+/* Track */
+#passwordGeneratorContainer ::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+#passwordGeneratorContainer ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5vh;
+}
+/* Handle on hover */
+#passwordGeneratorContainer ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+@media screen and (max-width: 1195px) { /* For mobiles */
+    body {
+        flex-direction: column;
+    }
+    #textContainer {
+        width: calc(100% - 1rem * 2);
+    }
+    #typingContainer {
+        width: 80%;
+        height: 50%;
+    }
+    #passwordGeneratorContainer {
+        width: calc(90% - .5rem * 2);
+        padding: .5rem;
+        font-size: calc(auto / 2);
+        border-radius: .25rem;
+        overflow: auto hidden;
+    }
+    #passwordGeneratorContainer div {
+        white-space: nowrap;
+        overflow: auto hidden;
+        font-size: 80%;
+        text-align: center;
+    }
+}
