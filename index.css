@@ -21,15 +21,17 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: calc(50% - 1rem * 2);
+    height: calc(50% - 1rem * 2);
     padding: 1rem;
 }
 #typingContainer h1 {
-    overflow: hidden;
     text-align: center;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 h3 {
     text-align: center;
+    margin: 0;
 }
 #download {
     background: var(--alt-background);
@@ -130,11 +132,8 @@ h3 {
         flex-direction: column;
     }
     #textContainer {
-        width: calc(100% - 1rem * 2);
-    }
-    #typingContainer {
         width: 80%;
-        height: 50%;
+        height: 70%;
     }
     #passwordGeneratorContainer {
         width: calc(90% - .5rem * 2);
